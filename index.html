@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akanksha Omane | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- RGB Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- RGB Background Particles -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-text">AO</span>
+      <span class="brand-dot rgb-text">.</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <i class="fas fa-sun" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section home-section">
+    <div class="rgb-ring ring1"></div>
+    <div class="rgb-ring ring2"></div>
+    <div class="rgb-ring ring3"></div>
+    <div class="home-content">
+      <div class="home-photo-wrapper">
+        <div class="photo-rgb-border">
+          <div class="photo-inner">
+            <img src="assets/images/profile.jpg" alt="Akanksha Omane" class="profile-photo" onerror="this.src='https://ui-avatars.com/api/?name=Akanksha+Omane&size=300&background=0f0f0f&color=00f5ff&bold=true&font-size=0.3'" />
+          </div>
+        </div>
+        <div class="status-badge">
+          <span class="pulse-dot"></span> Open to Opportunities
+        </div>
+      </div>
+      <div class="home-text">
+        <p class="greeting">Hello, World! 👋</p>
+        <h1 class="hero-name">
+          <span class="name-line">Akanksha</span>
+          <span class="name-line rgb-text">Omane</span>
+        </h1>
+        <div class="typing-wrapper">
+          <span class="typing-prefix">I am a </span>
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          B.Tech 1st Year Student | Passionate about AI, Technology & Innovation.
+          Building tomorrow's solutions with today's code.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">🤖 AI Enthusiast</span>
+          <span class="tag">💻 Developer</span>
+          <span class="tag">🎨 Designer</span>
+          <span class="tag">🚀 Innovator</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-outline">Get In Touch <i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:akanksha@email.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section about-section">
+    <div class="section-header">
+      <span class="section-label">Get To Know Me</span>
+      <h2 class="section-title">About <span class="rgb-text">Me</span></h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-card education-card glass-card">
+        <div class="card-icon rgb-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Education</h3>
+        <div class="edu-item">
+          <div class="edu-year">2024 – Present</div>
+          <div class="edu-degree">B.Tech (Computer Science)</div>
+          <div class="edu-school">Your College Name, Maharashtra</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year">2022 – 2024</div>
+          <div class="edu-degree">HSC – Science Stream</div>
+          <div class="edu-school">Your School Name</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year">2022</div>
+          <div class="edu-degree">SSC</div>
+          <div class="edu-school">Your School Name</div>
+        </div>
+      </div>
+
+      <div class="about-card interest-card glass-card">
+        <div class="card-icon rgb-icon"><i class="fas fa-heart"></i></div>
+        <h3>Interests</h3>
+        <div class="interests-grid">
+          <div class="interest-item"><i class="fas fa-robot"></i><span>Artificial Intelligence</span></div>
+          <div class="interest-item"><i class="fas fa-code"></i><span>Web Development</span></div>
+          <div class="interest-item"><i class="fas fa-palette"></i><span>UI/UX Design</span></div>
+          <div class="interest-item"><i class="fas fa-brain"></i><span>Design Thinking</span></div>
+          <div class="interest-item"><i class="fas fa-book"></i><span>Reading</span></div>
+          <div class="interest-item"><i class="fas fa-music"></i><span>Music</span></div>
+        </div>
+      </div>
+
+      <div class="about-card goals-card glass-card">
+        <div class="card-icon rgb-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Goals</h3>
+        <ul class="goals-list">
+          <li><i class="fas fa-chevron-right rgb-text"></i> Master Full-Stack Development & AI/ML</li>
+          <li><i class="fas fa-chevron-right rgb-text"></i> Contribute to impactful open-source projects</li>
+          <li><i class="fas fa-chevron-right rgb-text"></i> Build innovative tech solutions for real-world problems</li>
+          <li><i class="fas fa-chevron-right rgb-text"></i> Secure internship at top tech companies</li>
+          <li><i class="fas fa-chevron-right rgb-text"></i> Become a skilled AI Engineer</li>
+        </ul>
+      </div>
+
+      <div class="about-card skills-card glass-card">
+        <div class="card-icon rgb-icon"><i class="fas fa-star"></i></div>
+        <h3>Strengths</h3>
+        <div class="skills-bars">
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Problem Solving</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Teamwork</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Communication</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Creativity</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Quick Learner</span><span>92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="tech-stack">
+      <h3 class="tech-title">Tech Stack & Tools</h3>
+      <div class="tech-icons">
+        <div class="tech-badge"><i class="fab fa-html5"></i><span>HTML5</span></div>
+        <div class="tech-badge"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="tech-badge"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+        <div class="tech-badge"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="tech-badge"><i class="fab fa-github"></i><span>GitHub</span></div>
+        <div class="tech-badge"><i class="fas fa-database"></i><span>SQL</span></div>
+        <div class="tech-badge"><i class="fas fa-network-wired"></i><span>Networking</span></div>
+        <div class="tech-badge"><i class="fas fa-robot"></i><span>AI/ML</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS SECTION -->
+  <section id="achievements" class="section achievements-section">
+    <div class="section-header">
+      <span class="section-label">What I've Earned</span>
+      <h2 class="section-title">Achievements & <span class="rgb-text">Certificates</span></h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="project">Projects</button>
+      <button class="filter-btn" data-filter="certificate">Certificates</button>
+      <button class="filter-btn" data-filter="award">Awards</button>
+    </div>
+
+    <div class="achievements-grid" id="achievementsGrid">
+
+      <!-- AI4A Project -->
+      <div class="achievement-card glass-card" data-category="project">
+        <div class="achievement-badge ai-badge"><i class="fas fa-robot"></i></div>
+        <div class="achievement-img-wrapper">
+          <img src="assets/certificates/ai4a.jpg" alt="AI4A Project" onerror="this.src=''" class="cert-preview" />
+          <div class="achievement-overlay">
+            <button class="view-btn" onclick="openLightbox('assets/certificates/ai4a.jpg','AI4A Project')">
+              <i class="fas fa-expand"></i> View
+            </button>
+          </div>
+        </div>
+        <div class="achievement-info">
+          <span class="achievement-type project-tag">Project</span>
+          <h3>AI for All (Ai4A)</h3>
+          <p>Completed the AI for All program exploring fundamentals of Artificial Intelligence, machine learning concepts, and real-world AI applications with hands-on projects.</p>
+          <div class="achievement-meta">
+            <span><i class="fas fa-calendar"></i> 2024</span>
+            <span><i class="fas fa-certificate"></i> Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Thinking -->
+      <div class="achievement-card glass-card" data-category="project">
+        <div class="achievement-badge dt-badge"><i class="fas fa-lightbulb"></i></div>
+        <div class="achievement-img-wrapper">
+          <img src="assets/certificates/design-thinking.jpg" alt="Design Thinking" onerror="this.src=''" class="cert-preview" />
+          <div class="achievement-overlay">
+            <button class="view-btn" onclick="openLightbox('assets/certificates/design-thinking.jpg','Design Thinking Project')">
+              <i class="fas fa-expand"></i> View
+            </button>
+          </div>
+        </div>
+        <div class="achievement-info">
+          <span class="achievement-type project-tag">Project</span>
+          <h3>Design Thinking Project</h3>
+          <p>Applied Stanford's design thinking methodology — Empathize, Define, Ideate, Prototype, Test — to develop user-centric solutions for real-world challenges.</p>
+          <div class="achievement-meta">
+            <span><i class="fas fa-calendar"></i> 2024</span>
+            <span><i class="fas fa-users"></i> Team Project</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACE Project -->
+      <div class="achievement-card glass-card" data-category="project">
+        <div class="achievement-badge ace-badge"><i class="fas fa-award"></i></div>
+        <div class="achievement-img-wrapper">
+          <img src="assets/certificates/ace.jpg" alt="ACE Project" onerror="this.src=''" class="cert-preview" />
+          <div class="achievement-overlay">
+            <button class="view-btn" onclick="openLightbox('assets/certificates/ace.jpg','ACE Project')">
+              <i class="fas fa-expand"></i> View
+            </button>
+          </div>
+        </div>
+        <div class="achievement-info">
+          <span class="achievement-type project-tag">Project</span>
+          <h3>ACE Project</h3>
+          <p>Completed the ACE (Academic and Co-curricular Excellence) project demonstrating skills in research, analysis, and project presentation with industry-standard deliverables.</p>
+          <div class="achievement-meta">
+            <span><i class="fas fa-calendar"></i> 2024</span>
+            <span><i class="fas fa-star"></i> Excellence Award</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coursera Certificate -->
+      <div class="achievement-card glass-card" data-category="certificate">
+        <div class="achievement-badge coursera-badge"><i class="fas fa-graduation-cap"></i></div>
+        <div class="achievement-img-wrapper">
+          <img src="assets/certificates/coursera.jpg" alt="Coursera Certificate" onerror="this.src=''" class="cert-preview" />
+          <div class="achievement-overlay">
+            <button class="view-btn" onclick="openLightbox('assets/certificates/coursera.jpg','Coursera Certificate')">
+              <i class="fas fa-expand"></i> View
+            </button>
+          </div>
+        </div>
+        <div class="achievement-info">
+          <span class="achievement-type cert-tag">Certificate</span>
+          <h3>Coursera Certification</h3>
+          <p>Successfully completed an industry-recognized course on Coursera, gaining expertise in cutting-edge technology concepts and practical application skills.</p>
+          <div class="achievement-meta">
+            <span><i class="fas fa-calendar"></i> 2024</span>
+            <span><i class="fas fa-university"></i> Coursera</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NetAcad Certificate -->
+      <div class="achievement-card glass-card" data-category="certificate">
+        <div class="achievement-badge netacad-badge"><i class="fas fa-network-wired"></i></div>
+        <div class="achievement-img-wrapper">
+          <img src="assets/certificates/netacad.jpg" alt="Cisco NetAcad" onerror="this.src=''" class="cert-preview" />
+          <div class="achievement-overlay">
+            <button class="view-btn" onclick="openLightbox('assets/certificates/netacad.jpg','Cisco NetAcad Certificate')">
+              <i class="fas fa-expand"></i> View
+            </button>
+          </div>
+        </div>
+        <div class="achievement-info">
+          <span class="achievement-type cert-tag">Certificate</span>
+          <h3>Cisco NetAcad Certificate</h3>
+          <p>Earned Cisco Networking Academy certification demonstrating proficiency in networking fundamentals, cybersecurity basics, and IT essentials.</p>
+          <div class="achievement-meta">
+            <span><i class="fas fa-calendar"></i> 2024</span>
+            <span><i class="fas fa-shield-alt"></i> Cisco</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yuva AI Certificate -->
+      <div class="achievement-card glass-card" data-category="certificate">
+        <div class="achievement-badge yuva-badge"><i class="fas fa-brain"></i></div>
+        <div class="achievement-img-wrapper">
+          <img src="assets/certificates/yuva-ai.jpg" alt="Yuva AI Certificate" onerror="this.src=''" class="cert-preview" />
+          <div class="achievement-overlay">
+            <button class="view-btn" onclick="openLightbox('assets/certificates/yuva-ai.jpg','Yuva AI Certificate')">
+              <i class="fas fa-expand"></i> View
+            </button>
+          </div>
+        </div>
+        <div class="achievement-info">
+          <span class="achievement-type cert-tag">Certificate</span>
+          <h3>Yuva AI Certificate</h3>
+          <p>Completed the Yuva AI program — a government initiative for youth AI education — covering fundamentals of artificial intelligence, data science, and ethical AI practices.</p>
+          <div class="achievement-meta">
+            <span><i class="fas fa-calendar"></i> 2024</span>
+            <span><i class="fas fa-flag"></i> Govt. Initiative</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section projects-section">
+    <div class="section-header">
+      <span class="section-label">What I've Built</span>
+      <h2 class="section-title">My <span class="rgb-text">Projects</span></h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card glass-card">
+        <div class="project-img-wrapper">
+          <img src="assets/images/project1.png" alt="Project 1" onerror="this.src=''" />
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <h3>AI4A Portfolio Project</h3>
+          <p>A comprehensive AI-powered project developed during the AI for All program. Features intelligent data processing, visualization, and user-friendly interface design.</p>
+        </div>
+      </div>
+
+      <div class="project-card glass-card">
+        <div class="project-img-wrapper">
+          <img src="assets/images/project2.png" alt="Project 2" onerror="this.src=''" />
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tech">
+            <span>Python</span><span>ML</span><span>Design Thinking</span>
+          </div>
+          <h3>Design Thinking Solution</h3>
+          <p>User-centric solution developed using design thinking methodology. Identified a real-world problem, prototyped, and tested with target users for maximum impact.</p>
+        </div>
+      </div>
+
+      <div class="project-card glass-card featured-project">
+        <div class="featured-label"><i class="fas fa-star"></i> Featured</div>
+        <div class="project-img-wrapper">
+          <img src="assets/images/project3.png" alt="ACE Project" onerror="this.src=''" />
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tech">
+            <span>Research</span><span>Analysis</span><span>Presentation</span>
+          </div>
+          <h3>ACE Excellence Project</h3>
+          <p>Award-winning project combining academic research with real-world application. Demonstrated strong analytical and presentation skills at college level competition.</p>
+        </div>
+      </div>
+
+      <div class="project-card glass-card">
+        <div class="project-img-wrapper">
+          <img src="assets/images/project4.png" alt="Portfolio" onerror="this.src=''" />
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
+            <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>This very portfolio! Built with pure HTML, CSS & JavaScript featuring RGB lighting effects, particle animations, dark/light mode toggle, and smooth scroll interactions.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-header">
+      <span class="section-label">Memories & Moments</span>
+      <h2 class="section-title">My <span class="rgb-text">Gallery</span></h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-gfilter="all">All</button>
+      <button class="filter-btn" data-gfilter="photo">Photos</button>
+      <button class="filter-btn" data-gfilter="cert">Certificates</button>
+      <button class="filter-btn" data-gfilter="event">Events</button>
+    </div>
+    <div class="gallery-masonry" id="galleryGrid">
+      <div class="gallery-item" data-gcategory="cert" onclick="openLightbox('assets/certificates/coursera.jpg','Coursera Certificate')">
+        <img src="assets/certificates/coursera.jpg" alt="Coursera" onerror="this.parentElement.style.display='none'" />
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Coursera Certificate</span></div>
+      </div>
+      <div class="gallery-item" data-gcategory="cert" onclick="openLightbox('assets/certificates/netacad.jpg','Cisco NetAcad')">
+        <img src="assets/certificates/netacad.jpg" alt="NetAcad" onerror="this.parentElement.style.display='none'" />
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Cisco NetAcad</span></div>
+      </div>
+      <div class="gallery-item" data-gcategory="cert" onclick="openLightbox('assets/certificates/yuva-ai.jpg','Yuva AI')">
+        <img src="assets/certificates/yuva-ai.jpg" alt="Yuva AI" onerror="this.parentElement.style.display='none'" />
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Yuva AI Certificate</span></div>
+      </div>
+      <div class="gallery-item" data-gcategory="cert" onclick="openLightbox('assets/certificates/ai4a.jpg','AI4A')">
+        <img src="assets/certificates/ai4a.jpg" alt="AI4A" onerror="this.parentElement.style.display='none'" />
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>AI4A Certificate</span></div>
+      </div>
+      <div class="gallery-item" data-gcategory="photo" onclick="openLightbox('assets/images/photo1.jpg','Event Photo')">
+        <img src="assets/images/photo1.jpg" alt="Event" onerror="this.parentElement.style.display='none'" />
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Event Photo</span></div>
+      </div>
+      <div class="gallery-item" data-gcategory="event" onclick="openLightbox('assets/images/event1.jpg','College Event')">
+        <img src="assets/images/event1.jpg" alt="College Event" onerror="this.parentElement.style.display='none'" />
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>College Event</span></div>
+      </div>
+    </div>
+
+    <!-- Upload hint -->
+    <div class="gallery-hint glass-card">
+      <i class="fas fa-images rgb-text"></i>
+      <p>Upload your photos to <code>assets/images/</code> and certificates to <code>assets/certificates/</code> folder on GitHub to display them here.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header">
+      <span class="section-label">Let's Connect</span>
+      <h2 class="section-title">Get In <span class="rgb-text">Touch</span></h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Let's work together!</h3>
+        <p>I'm always open to discussing new opportunities, collaborations, or just having a conversation about technology and innovation.</p>
+
+        <div class="contact-cards">
+          <a href="mailto:akanksha.omane@email.com" class="contact-card glass-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span>Email</span>
+              <strong>akanksha.omane@email.com</strong>
+            </div>
+          </a>
+          <a href="tel:+91XXXXXXXXXX" class="contact-card glass-card">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span>Phone</span>
+              <strong>+91 XXXXXXXXXX</strong>
+            </div>
+          </a>
+          <a href="#" class="contact-card glass-card">
+            <div class="contact-card-icon"><i class="fab fa-linkedin"></i></div>
+            <div>
+              <span>LinkedIn</span>
+              <strong>linkedin.com/in/akanksha-omane</strong>
+            </div>
+          </a>
+          <a href="#" class="contact-card glass-card">
+            <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <span>GitHub</span>
+              <strong>github.com/akanksha-omane</strong>
+            </div>
+          </a>
+          <div class="contact-card glass-card">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span>Location</span>
+              <strong>Maharashtra, India</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form glass-card" id="contactForm">
+        <h3>Send a Message</h3>
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required class="form-input" />
+          <label>Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required class="form-input" />
+          <label>Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Subject" class="form-input" />
+          <label>Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Your Message" required class="form-input"></textarea>
+          <label>Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Send Message <i class="fas fa-paper-plane"></i>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="brand-text">AO</span><span class="rgb-text">.</span>
+      </div>
+      <p>Designed & Built with ❤️ by <span class="rgb-text">Akanksha Omane</span></p>
+      <p class="footer-sub">B.Tech 1st Year | Maharashtra, India</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:akanksha@email.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="copyright">© 2024 Akanksha Omane. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" title="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
